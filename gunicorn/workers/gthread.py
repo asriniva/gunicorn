@@ -325,7 +325,7 @@ class ThreadWorker(base.Worker):
                 else:
                     for item in respiter:
                         resp.write(item)
-
+                time.sleep(1)
                 resp.close()
                 request_time = datetime.now() - request_start
                 self.log.access(resp, req, environ, request_time)

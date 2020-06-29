@@ -268,7 +268,6 @@ def close(sock):
     except socket.error:
         pass
     try:
-        time.sleep(1)
         sock.close()
     except socket.error:
         pass
