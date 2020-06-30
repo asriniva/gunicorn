@@ -263,10 +263,10 @@ def close(sock):
                 # Some platforms sometimes produce an exception with errno = 0 here
                 # Or maybe that's just a gevent thing.
                 raise
-    try:
-        sock.shutdown(socket.SHUT_RDWR)
-    except socket.error:
-        pass
+ #   try:
+    sock.shutdown(socket.SHUT_RDWR)
+  #  except socket.error:
+   #     pass
     try:
         sock.close()
     except socket.error:
